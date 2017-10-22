@@ -1,32 +1,34 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.list.StackList;
+
 public class stack {
 
-	StackArray sarray = new StackArray();
+	StackList sarray = new StackList();
 
 	public stack() {
 		super();
 	}
 
-	public stack(StackArray sarray) {
+	public stack(StackList sarray) {
 		super();
 		this.sarray = sarray;
 	}
 
 	public void push(int i) {
-		sarray.push(i);
+		sarray.pushElement(i);
 	}
 
 	public boolean isEmpty() {
-		return sarray.isEmpty();
+		return sarray.empty();
 	}
 
 	public boolean isFull() {
-		return sarray.isFull();
+		return sarray.empty();
 	}
 
 	public int top() {
-		return sarray.top();
+		return sarray.peek();
 	}
 
 	public int pop() {
